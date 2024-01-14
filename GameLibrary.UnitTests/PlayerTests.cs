@@ -1,9 +1,4 @@
 ﻿using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameLibrary.UnitTests
 {
@@ -67,6 +62,51 @@ namespace GameLibrary.UnitTests
             Assert.Equal(currentDate, player.JoinDate);
 
             player.JoinDate.Should().Be(currentDate);
+        }
+
+        [Fact]
+        public void AddItemToInventory_WithNewItem_AddsItemToInventory()
+        {
+            // Arrange (Prepare)
+            Player player = new Player("Alice", 1, DateTime.Now);
+            InventoryItem item = new InventoryItem(101, "Sword", "A sharp blade.");
+
+            // Act (Perform)
+            player.AddItemToInventory(item);
+
+            // Assert (Verify)
+            player.InventoryItems.Should().HaveCount(1);
+            player.InventoryItems.Should().NotBeEmpty();
+            player.InventoryItems.Should().Contain(item);
+            player.InventoryItems.Should().ContainSingle(item => item.Id == 101 && item.Name == "Sword");
+        }
+
+        [Fact]
+        public void Greet_NullOrEmptyGreeting_ThrowsArgumentException()
+        {
+            // Arrange (Prepare)
+            Player player = new Player("Alice", 1, DateTime.Now);
+
+            // Act (Perform)
+            Action act = () => player.Greet(null);
+
+            // Assert (Verify)
+            //Assert.Throws<ArgumentException>(act);
+            act.Should().Throw<ArgumentException>();
+        }
+
+        [Fact]
+        public void IncreaseLevel_WhenCalled_RaisesLevelUpEvent()
+        {
+            // Arrange (Prepare)
+            Player player = new Player("Alice", 1, DateTime.Now);
+            using var monitor = player.Monitor();
+
+            // Act (Perform)
+            player.IncreaseLevel();
+
+            // Assert (Verify)
+            monitor.Should().Raise(nameof(player.LevelUp));
         }
     }
 }
