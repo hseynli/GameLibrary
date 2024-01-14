@@ -100,3 +100,8 @@ E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\obj\Debug\net8.0\refint
 E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\obj\Debug\net8.0\GameLibrary.UnitTests.pdb
 E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\obj\Debug\net8.0\GameLibrary.UnitTests.genruntimeconfig.cache
 E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\obj\Debug\net8.0\ref\GameLibrary.UnitTests.dll
+E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\obj\Debug\net8.0\GameLibrary.UnitTests.sourcelink.json
+E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\bin\Debug\net8.0\FluentAssertions.dll
+E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\Projects\VsProjects\GameLibrary\GameLibrary.UnitTests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

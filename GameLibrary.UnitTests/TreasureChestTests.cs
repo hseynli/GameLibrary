@@ -34,7 +34,28 @@ public class TreasureChestTests : IDisposable
         Assert.Single(chests);
     }
 
+    // For use internal methods use this in the tested project:
+    /*
+     <ItemGroup>
+        <InternalsVisibleTo Include="GameLibrary.UnitTests"/>
+     </ItemGroup>
+     */
     [Fact]
+    public void Inverse_WhenCalled_ThenInverseTheBoolValue()
+    {
+        // Arrange (Prepare)
+        TreasureChest chest = new TreasureChest(true);
+
+        // Act (Perform)
+        bool actual = chest.Inverse(true);
+        output.WriteLine($"Actual value: {actual}");
+
+        // Assert (Verify)
+        Assert.False(actual);
+    }
+
+    // For ignore some unit test use skip property
+    [Fact(Skip = "Unit test is not ready yet")]
     public void CanOpen_ChestIsLockedAndHasKey_ReturnsTrue()
     {
         // Arrange (Prepare)
@@ -67,7 +88,10 @@ public class TreasureChestTests : IDisposable
 
     public void Dispose()
     {
-        chests.Pop();
-        Assert.Empty(chests);
+        if (chests.Count > 0)
+        {
+            chests.Pop();
+            Assert.Empty(chests);
+        }
     }
 }

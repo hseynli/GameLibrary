@@ -13,4 +13,9 @@ public class TreasureChest
     {
         return !IsLocked || hasKey;
     }
+
+    internal bool Inverse(bool value)
+    {
+        return !value;
+    }
 }

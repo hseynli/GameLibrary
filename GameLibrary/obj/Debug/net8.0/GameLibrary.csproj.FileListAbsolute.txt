@@ -9,3 +9,4 @@ E:\Projects\VsProjects\GameLibrary\GameLibrary\obj\Debug\net8.0\GameLibrary.dll
 E:\Projects\VsProjects\GameLibrary\GameLibrary\obj\Debug\net8.0\refint\GameLibrary.dll
 E:\Projects\VsProjects\GameLibrary\GameLibrary\obj\Debug\net8.0\GameLibrary.pdb
 E:\Projects\VsProjects\GameLibrary\GameLibrary\obj\Debug\net8.0\ref\GameLibrary.dll
+E:\Projects\VsProjects\GameLibrary\GameLibrary\obj\Debug\net8.0\GameLibrary.sourcelink.json
